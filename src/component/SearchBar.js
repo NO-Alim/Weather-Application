@@ -39,11 +39,20 @@ const SearchBar = () => {
             className="bg-slate-700 rounded-full focus:outline-none px-5 py-1"
           />
           <div
-            className={`autocomplete-dropdown-container bg-slate-300 fixed flex flex-col gap-2 z-[1000]${
+            className={`autocomplete-dropdown-container bg-transparent fixed flex flex-col gap-2 z-[1000]${
               suggestions?.length > 0 && 'p-2 rounded-md'
             }`}
           >
-            {loading && <div>Loading...</div>}
+            {loading && (
+              <div className="animate-pulse flex space-x-4 px-5 mt-3">
+                <div className="h-1 bg-slate-500 rounded w-1 flex justify-center items-center"></div>
+                <div className="h-1 bg-slate-500 rounded w-1 flex justify-center items-center"></div>
+                <div className="h-1 bg-slate-500 rounded w-1 flex justify-center items-center"></div>
+                <div className="h-1 bg-slate-500 rounded w-1 flex justify-center items-center"></div>
+                <div className="h-1 bg-slate-500 rounded w-1 flex justify-center items-center"></div>
+                <div className="h-1 bg-slate-500 rounded w-1 flex justify-center items-center"></div>
+              </div>
+            )}
             {suggestions.map((suggestion, ind) => {
               return (
                 <div {...getSuggestionItemProps(suggestion)} key={ind}>

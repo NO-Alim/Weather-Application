@@ -2,7 +2,6 @@ import moment from 'moment';
 import React from 'react';
 
 const SingleForecast = ({ data }) => {
-  console.log(data);
   return (
     <div className="x bg-slate-700 rounded-md p-2 flex flex-col items-center gap-2 w-full">
       <h4>{moment.unix(data.dt).format('MMM Do YY')}</h4>

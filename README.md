@@ -8,4 +8,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `NOTE`
 
-Before You Run The App You Should Be Provide GOOGLE API KEY.
+Before You Run The App You Should Be Provide GOOGLE MAP API KEY inside index.html.
