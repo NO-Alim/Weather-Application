@@ -14,8 +14,8 @@ const GoogleMap = ({ width }) => {
   };
 
   const center = {
-    lat: 22.3419,
-    lng: 91.815536,
+    lat,
+    lng,
   };
 
   const position = {
