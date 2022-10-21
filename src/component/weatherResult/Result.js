@@ -2,6 +2,7 @@ import moment from 'moment';
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useGetWeatherQuery } from '../../features/weatherForecast/weatherForecastApi';
+import useGetLocationName from '../../Hooks/useGetLocationName';
 const Result = () => {
   const { lat, lng } = useSelector((state) => state.location);
   const {
@@ -9,7 +10,7 @@ const Result = () => {
     isLoading,
     isError,
   } = useGetWeatherQuery({ lat, lng }) || {};
-
+  const address = useGetLocationName();
   let content;
 
   if (isLoading) {
@@ -49,6 +50,7 @@ const Result = () => {
       <div className="flex flex-col">
         <div className="flex justify-between">
           <div className="flex flex-col gap-2">
+            <h4>{address}</h4>
             <h4>{moment.unix(weatherData.dt).format('LLLL')}</h4>
             <h2 className="x text-slate-300">
               Sunrise 🌅: {moment.unix(weatherData.sys.sunrise).format('LTS')}
