@@ -1,6 +1,6 @@
 # Real Time Weather app
 
-### [Live Site](https://dreamy-torte-c1ff12.netlify.app/)
+### [Live Site](https://no-alim.github.io/Weather-Application/)
 ![cryptocurrency-converter](https://i.ibb.co/F54KnN4/weather.png)
 
 ## Introduction
